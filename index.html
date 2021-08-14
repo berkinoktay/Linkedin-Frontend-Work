@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend - Linkedin Farklı Arayüz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/linkedin 1.svg" alt="">
+            </a>
+            <div class="search">
+                <i class="icon-search"></i>
+                <input type="text" placeholder="Arayınız..">
+            </div>
+      
+            <nav class="menu">
+                <ul>
+                    <li class="active">
+                          <a href="#">
+                              <i class="icon-home"></i>
+                              <span>Anasayfa</span>
+                          </a>
+                    </li>
+                     <li>
+                          <a href="#">
+                              <i class="icon-users"></i>
+                              <span>Grup</span>
+                          </a>
+                    </li>
+                     <li>
+                          <a href="#">
+                              <i class="icon-briefcase"></i>
+                              <span>Proje</span>
+                          </a>
+                    </li>
+                    <li>
+                          <a href="#">
+                              <i class="icon-message"></i>
+                              <span>Mesaj</span>
+                          </a>
+                    </li>
+                    <li>
+                          <a href="#">
+                              <i class="icon-notification"></i>
+                              <span>Bildirim</span>
+                          </a>
+                    </li>
+                    <li>
+                          <a href="#">
+                              <i class="icon-grid"></i>
+                              <span>Uygulamalar</span>
+                          </a>
+                    </li>
+                </ul>
+            </nav>
+          
+                <a href="#" class="user">
+                    <span class="detail">
+                        <span class="name">
+                            Berkin Oktay
+                        </span>
+                        <span class="status">
+                            Çevrimiçi
+                        </span>
+                    </span>
+                        <img src="img/ben.jpg" alt="">
+                        <i class="icon-down-open"></i>
+                   
+                </a>
+            
+        </div>
+     
+  </header>
+
+  <main>
+      <!-- Share POPUP-->
+      <input type="checkbox" id="share" class="share-toggle">
+      <div class="share-popup" id="idShare">
+        <div class="share-popup-inner">
+            <label for="share" class="popup-close">
+                <img src="img/close.svg">
+            </label>
+            <h2>Gönderiyi paylaş</h2>
+            <div class="share-social">
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/twitter.svg"></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="img/facebook.svg"></a>
+                  </li>
+                  <li>
+                      <a href="#"><img src="img/pinterest.svg"></a>
+                  </li>
+                  <li>
+                      <a href="#"><img src="img/linkedin.svg"></a>
+                  </li>
+                  <li>
+                      <a href="#"><img src="img/instagram.svg"></a>
+                  </li>
+                  <li>
+                      <a href="#"><img src="img/tumblr.svg"></a>
+                  </li>
+                </ul>
+            </div>
+            <h6>ya da paylaşma linkini kopyala</h6>
+            <div class="share-input">
+              <input type="text" readonly id="input-url" value="https://www.linkedin.com/posts/5d6ab9ea91deae0012006d44">
+              <button type="button" onclick="copyurl('input-url')">Kopyala</button>
+            </div>
+        </div>
+    </div>
+            <!-- Share POPUP-->
+      <div class="container">
+          <div class="sidebar">
+              <div class="user-widget">
+                  <div class="background"></div>
+                  <div class="profile">
+                      <img src="img/ben.jpg" alt="">
+                  </div>
+                  <div class="name">Berkin Oktay</div>
+                  <div class="job">Frontend Developer</div>
+                  <div class="user-stat">
+                      <div>
+                            Profilinizi kaç kişi görüntüledi
+                            <span>90</span>
+                      </div>
+                      <div>
+                        Gönderini kaç kişi görüntüledi
+                        <span>627</span>
+                      </div>
+                  </div>
+              </div>
+            <div class="widget trend-widget">
+                <div class="title">POPÜLER</div>
+                <div class="menu tag">
+                    <ul>
+                        <li>
+                            <a href="#">bitcoin</a>
+                        </li>
+                        <li>
+                            <a href="#">ekonomi</a>
+                        </li>
+                        <li>
+                            <a href="#">zam</a>
+                        </li>
+                        <li>
+                            <a href="#">guncelleme</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title">GRUPLAR
+                    <a href="#">Aktif <i class="icon-down-open"></i></a>
+                </div>
+                <div class="menu group">
+                    <ul>
+                        <li>
+                            <a href="#">Android Developers Group</a>
+                        </li>
+                        <li>
+                            <a href="#">Kullanıcı arayüzü</a>
+                        </li>
+                        <li>
+                            <a href="#">Kullanıcı deneyimi</a>
+                        </li>
+                        <li>
+                            <a href="#">Tasarım düşüncesi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="widget event">
+                Etkinlik Ekle <i class="icon-plus"></i>
+            </a>
+            <a href="#" class="widget find">Find more</a>
+          </div>
+          <div class="content">
+              <div class="create-post">
+                  <textarea placeholder="Gönderi Oluştur.."></textarea>
+                  <ul>
+                      <li>
+                          <label>
+                            <input type="file" accept="image/*">
+                            <i class="icon-camera"></i>
+                            Fotoğraf
+                          </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="file" accept="video/*">
+                          <i class="icon-video"></i>
+                          Video
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                          <i class="icon-calendar"></i>
+                          Etkinlik
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                          <i class="icon-edit"></i>
+                          Makale Yaz
+                        </label>
+                    </li>
+                     
+                  </ul>
+              </div>
+              <div class="filter">
+                  Gönderiyi şuna göre filtrele :
+                  <a href="#">
+                      Popüler
+                      <i class="icon-down-open"></i>
+                  </a>
+              </div>
+              <div class="post">
+                  <div class="post-header">
+                    <a href="#" class="post-author">
+                        <img src="img/ugur.jpg">
+                        <div class="post-detail">
+                                <div class="post-name">Uğur Küçük</div>
+                                <div class="post-job">Freelance olarak UI/UX Designer</div>
+                                <div class="post-time">7 saat önce</div>
+                        </div>
+                    </a>
+                    <a href="#"><i class="icon-dot-3"></i></a>
+                </div>
+                  <div class="post-content">
+                    <p>Tasarım sadece göründüğü ve hissettirdiği gibi değil. Tasarım nasıl çalıştığıdır
+                    <span class="tags"><a href="#">#stevejobs</a> <a href="#">#design</a> <a href="#">#apple</a></span></p>
+                    <div class="post-image"><img src="img/Steve-Jobs-Quotes-1 1.jpg"></div>
+                  </div>
+                  <div class="post-stat">
+                    <div class="likes"><i class="icon-heart"></i><i class="icon-thumbs-up"></i> 172</div>
+                    <div class="comments">10 Comment</div>
+                  </div>
+                  <ul>
+                      <li>
+                          <a href="#">
+                              <i class="icon-thumbs-up"></i>
+                              Beğen
+                          </a>
+                      </li>
+                      <li>
+                            <a href="#">
+                                <i class="icon-message"></i>
+                                Yorum
+                            </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <label for="share">
+                            <i class="icon-share"></i>
+                            Paylaş
+                            </label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-send"></i>
+                            Gönder
+                        </a>
+                    </li>
+                  </ul>
+                  <div class="post-comment">
+                      <img src="img/ben.jpg" alt="">
+                      <div class="comment-block">
+                        <textarea placeholder="Yorum yaz"></textarea>
+                        <label>
+                            <input type="file" accept="image/*">
+                            <i class="icon-camera"></i>
+                        </label>
+                      </div>
+                      
+                  </div>
+              </div>
+              
+              <div class="post">
+                <div class="post-header">
+                  <a href="#" class="post-author">
+                      <img src="img/ugur.jpg">
+                      <div class="post-detail">
+                              <div class="post-name">Uğur Küçük</div>
+                              <div class="post-job">Freelance olarak UI/UX Designer</div>
+                              <div class="post-time">7 saat önce</div>
+                      </div>
+                  </a>
+                  <a href="#"><i class="icon-dot-3"></i></a>
+              </div>
+                <div class="post-content">
+                  <p>Tasarım sadece göründüğü ve hissettirdiği gibi değil. Tasarım nasıl çalıştığıdır
+                  <span class="tags"><a href="#">#stevejobs</a> <a href="#">#design</a> <a href="#">#apple</a></span></p>
+                  <div class="post-image"><img src="img/Steve-Jobs-Quotes-1 1.jpg"></div>
+                </div>
+                <div class="post-stat">
+                  <div class="likes"><i class="icon-heart"></i><i class="icon-thumbs-up"></i> 172</div>
+                  <div class="comments">10 Comment</div>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon-thumbs-up"></i>
+                            Beğen
+                        </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                          <i class="icon-message"></i>
+                          Yorum
+                      </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                        <label for="share">
+                        <i class="icon-share"></i>
+                        Paylaş
+                        </label>
+                    </a>
+                </li>
+                  <li>
+                      <a href="#">
+                          <i class="icon-send"></i>
+                          Gönder
+                      </a>
+                  </li>
+                </ul>
+                <div class="post-comment">
+                    <img src="img/ben.jpg" alt="">
+                    <div class="comment-block">
+                      <textarea placeholder="Yorum yaz"></textarea>
+                      <label>
+                          <input type="file" accept="image/*">
+                          <i class="icon-camera"></i>
+                      </label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                  <a href="#" class="post-author">
+                      <img src="img/ugur.jpg">
+                      <div class="post-detail">
+                              <div class="post-name">Uğur Küçük</div>
+                              <div class="post-job">Freelance olarak UI/UX Designer</div>
+                              <div class="post-time">7 saat önce</div>
+                      </div>
+                  </a>
+                  <a href="#"><i class="icon-dot-3"></i></a>
+              </div>
+                <div class="post-content">
+                  <p>Tasarım sadece göründüğü ve hissettirdiği gibi değil. Tasarım nasıl çalıştığıdır
+                  <span class="tags"><a href="#">#stevejobs</a> <a href="#">#design</a> <a href="#">#apple</a></span></p>
+                  <div class="post-image"><img src="img/Steve-Jobs-Quotes-1 1.jpg"></div>
+                </div>
+                <div class="post-stat">
+                  <div class="likes"><i class="icon-heart"></i><i class="icon-thumbs-up"></i> 172</div>
+                  <div class="comments">10 Comment</div>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon-thumbs-up"></i>
+                            Beğen
+                        </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                          <i class="icon-message"></i>
+                          Yorum
+                      </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                        <label for="share">
+                        <i class="icon-share"></i>
+                        Paylaş
+                        </label>
+                    </a>
+                </li>
+                  <li>
+                      <a href="#">
+                          <i class="icon-send"></i>
+                          Gönder
+                      </a>
+                  </li>
+                </ul>
+                <div class="post-comment">
+                    <img src="img/ben.jpg" alt="">
+                    <div class="comment-block">
+                      <textarea placeholder="Yorum yaz"></textarea>
+                      <label>
+                          <input type="file" accept="image/*">
+                          <i class="icon-camera"></i>
+                      </label>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+          <div class="sidebar">
+              <div class="feeds">
+                <div class="title">Önerilerinizi Ekleyin</div>
+                <div class="feed-list">
+                    <ul>
+                        <li>
+                            <img src="img/tech.png" alt="">
+                            <a href="#" class="feed-title">Techin Asia Indonesia <div class="feed-cat"><span>Corporate</span> Online Media</div></a>
+                            <div class="feed-add"><i class="icon-plus"></i></div>
+                        </li>
+                        <li>
+                            <img src="img/figma.png" alt="">
+                            <a href="#" class="feed-title">Techin Asia Indonesia <div class="feed-cat"><span>Corporate</span> Online Media</div></a>
+                            <div class="feed-add"><i class="icon-plus"></i></div>
+                        </li>
+                        <li>
+                            <img src="img/uplabs 1.png" alt="">
+                            <a href="#" class="feed-title">Techin Asia Indonesia <div class="feed-cat"><span>Corporate</span> Online Media</div></a>
+                            <div class="feed-add"><i class="icon-plus"></i></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="all-link">Tüm Önerileri Gör</div>
+              </div>
+              <div class="ads">
+                <div class="title">
+                    <div>Reklamlar <span>En son haberleri ve iş ilanlarını alın</span></div>
+                    <a href="#"><i class="icon-dot-3"></i></a>
+                </div>
+                <div class="ads-content">
+                    <div class="ads-images">
+                        <img src="img/yusufmatra 2.jpg" alt="">
+                        <img src="img/design.jpg" alt="">
+                    </div>
+                    <p>Bu bir <b>yatırım tavsiyesi değildir.</b> Lütfen tıklamadan önce <b>dikkate alınız.</b></p>
+                </div>
+                <div class="all-link">Şimdi Ziyaret Et</div>
+              </div>
+              <div class="footer">
+                  <ul>
+                      <li>
+                          <a href="#">Hakkımızda</a>
+                      </li>
+                      <li>
+                        <a href="#">Destek Merkezi</a>
+                    </li>
+                    <li>
+                        <a href="#">Erişebilirlik</a>
+                    </li>
+                    <li>
+                        <a href="#">Gizlilik ve Şartlar</a>
+                    </li>
+                    <li>
+                        <a href="#">Reklam Seçenekleri</a>
+                    </li>
+                    <li>
+                        <a href="#">Reklâm</a>
+                    </li>
+                    <li>
+                        <a href="#">İş hizmetleri</a>
+                    </li>
+                    <li>
+                        <a href="#">LinkedIn uygulamasını edinin</a>
+                    </li>
+                    <li>
+                        <a href="#">Daha Fazla</a>
+                    </li>
+                  </ul>
+                  <div class="copyright">LinkedIn Corporation © 2020 <img src="img/linkedin 1.svg" alt=""></div>
+              </div>
+          </div>
+          <div class="message-box">
+            <div class="message-stat">
+                <div class="message-img">
+                <img src="img/ben.jpg">
+                </div>
+                  Mesajlaşma
+            </div>
+            <div class="message-icons">
+                <a href="#"><i class="icon-edit"></i></a>
+                <a href="#"><i class="icon-dot-3"></i></a>
+                <a href="#"><i class="icon-up-open"></i></a>
+            </div>
+          </div>
+      </div>
+
+  </main>
+</body>
+</html>
